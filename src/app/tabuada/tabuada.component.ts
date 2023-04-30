@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  standalone: true,
+  imports: [ FormsModule, NgModule ], 
   selector: 'app-tabuada',
   templateUrl: './tabuada.component.html',
   styleUrls: ['./tabuada.component.css']
