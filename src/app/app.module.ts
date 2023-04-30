@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RootComponent } from './root/root.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { MultTableComponent } from './mult-table/mult-table.component';
 import { MultTableDetailsComponent } from './mult-table-details/mult-table-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { ThayllaComponent } from './thaylla/thaylla.component';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent },
+      { path: 'thaylla', component: ThayllaComponent },
       { path: 'mult-table', component: MultTableComponent },
       { path: 'mult-table/:n', component: MultTableDetailsComponent },
     ]),
@@ -24,7 +24,7 @@ import { RouterModule } from '@angular/router';
     RootComponent,
     NavbarComponent,
     HomeComponent,
-    AboutComponent,
+    ThayllaComponent,
     MultTableComponent,
     MultTableDetailsComponent,
   ],
