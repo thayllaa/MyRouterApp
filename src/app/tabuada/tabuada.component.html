@@ -1,4 +1,4 @@
-<input type="number" [(ngModel)]="n" />
+<input type="number" [(ngModel)]="number" />
 <br>
 <table>
   <tr>
@@ -6,11 +6,11 @@
     <th> Resultado </th>
   </tr>
   <tr *ngFor="let i of [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]">
-    <td> {{ n }} </td>
-    <td> {{ n }} </td>
+    <td> {{ number }} </td>
+    <td> {{ number }} </td>
     <td> x </td>
     <td> {{ i }} </td>
     <td> = </td>
-    <td> {{ n * i }} </td>
+    <td> {{ number * i }} </td>
   </tr>
 </table>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tabuada',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TabuadaComponent implements OnInit {
-  n: number;
+  @Input() number: number = 1;
 
   constructor() {}
 
@@ -15,7 +16,7 @@ export class TabuadaComponent implements OnInit {
 
   getNumbers() {
     let arr = [];
-    for (let i = 1; i <= this.n; i++) {
+    for (let i = 1; i <= this.number; i++) {
       arr.push(Math.trunc(100 * Math.random()));
     }
     return arr;
@@ -24,7 +25,7 @@ export class TabuadaComponent implements OnInit {
   multiplicar() {
     let arr = [];
     for (let i = 1; i <= 10; i++) {
-      arr.push(this.n * i);
+      arr.push(this.number * i);
     }
     return arr;
   }
