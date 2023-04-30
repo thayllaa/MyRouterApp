@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -8,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class TabuadaComponent implements OnInit {
-  @Input() number: number = 1;
+  number: number = 1;
 
   constructor() {}
 
