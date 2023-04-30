@@ -1,15 +1,23 @@
-<input type="number" [(ngModel)]="number" />
-<br>
-<table>
-  <tr>
-    <th> Number </th>
-    <th> Resultado </th>
-  </tr>
-  <tr *ngFor="let i of [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]">
-    <td> {{ number }} </td>
-    <td> x </td>
-    <td> {{ i }} </td>
-    <td> = </td>
-    <td> {{ number * i }} </td>
-  </tr>
-</table>
+<h5> Tabuada </h5>
+<div>
+  <label>Digite um número:</label>
+  <input type="number" [(ngModel)]="numero" (keydown.enter)="gerarTabuada()" />
+  <button (click)="gerarTabuada()">Gerar tabuada</button>
+</div>
+<br />
+<div *ngIf="tabuada">
+  <table>
+    <thead>
+      <tr>
+        <th>Operação</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tabuada">
+        <td>{{item.operacao}}</td>
+        <td>{{item.resultado}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
