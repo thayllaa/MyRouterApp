@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,9 +12,13 @@ import { FormsModule } from '@angular/forms';
 export class TabuadaComponent implements OnInit {
   number: number = 1;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.paramMap.subscribe((params) => {
+      this.number = Number(params.get('number'));
+    });
+  }
 
   getNumbers() {
     let arr = [];
