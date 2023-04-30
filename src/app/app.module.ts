@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RootComponent } from './root/root.component';
 import { HomeComponent } from './home/home.component';
-import { MultTableComponent } from './mult-table/mult-table.component';
-import { MultTableDetailsComponent } from './mult-table-details/mult-table-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { ThayllaComponent } from './thaylla/thaylla.component';
+import { TabuadaComponent } from './tabuada/tabuada.component';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   imports: [
@@ -16,8 +16,8 @@ import { ThayllaComponent } from './thaylla/thaylla.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'thaylla', component: ThayllaComponent },
-      { path: 'mult-table', component: MultTableComponent },
-      { path: 'mult-table/:n', component: MultTableDetailsComponent },
+      { path: 'tabuada', component: TabuadaComponent },
+      { path: 'timer', component: TimerComponent },
     ]),
   ],
   declarations: [
@@ -25,8 +25,8 @@ import { ThayllaComponent } from './thaylla/thaylla.component';
     NavbarComponent,
     HomeComponent,
     ThayllaComponent,
-    MultTableComponent,
-    MultTableDetailsComponent,
+    TabuadaComponent,
+    TimerComponent
   ],
   bootstrap: [RootComponent],
 })
